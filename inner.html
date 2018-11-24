@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<link rel="stylesheet"  href="css/innerstyle.css">
 	<title>Отели</title>
 </head>
 <body>
@@ -18,9 +19,34 @@
   			</a>
   		</nav>
   		<main>
+  			<h1 class="visually-hidden">Выбор отеля</h1>
 			<section class="choise">
-				<img src="img/filterMountains.jpg" alt="Размытый фон" width="50%" height="50%">
-				<!-- Тут будет форма -->
+				<!--<img src="img/filterMountains.jpg" alt="Размытый фон" width="50%" height="50%">-->
+				<form action="#" method="post">
+					<fieldset class="field first-field">
+						<legend>Инфраструктура:</legend>
+						<input type="checkbox" name="pool-field" id="pool" checked>
+						<label for="pool">Бассейн</label>
+						<input type="checkbox" name="parking-field" id="parking">
+						<label for="parking">Парковка</label>
+						<input type="checkbox" name="internet-field" id="internet">
+						<label for="internet">Wi-Fi</label>
+					</fieldset>
+					<fieldset class="field first-field">
+						<legend>Тип жилья:</legend>
+						<input type="checkbox" name="hotel-field" id="hotel" checked>
+						<label for="hotel">Гостиница</label>
+						<input type="checkbox" name="motel-field" id="motel" checked>
+						<label for="motel">Мотель</label>
+						<input type="checkbox" name="appartment-field" id="appartment" checked>
+						<label for="appartment">Аппартаменты</label>
+					</fieldset>
+					<fieldset class="field second-field">
+						<legend>Стоимость в сутки (Р):</legend>
+						<input type="range" name="price-field" min="" max="" step="1">
+						<button type="button" class="form-button">Показать</button>
+					</fieldset>
+				</form>
 			</section>
 			<section class="hotels">
 				<h2 class="visually-hidden">Список отелей</h2>

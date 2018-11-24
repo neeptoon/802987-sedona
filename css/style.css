@@ -1,0 +1,13 @@
+.image .block1 {
+	width: 100%;
+	height: 550px;
+
+	background: url("../img/mountains.jpg") no-repeat;
+}
+
+.image .block2 {
+	width: 100%;
+	height: 500px;
+	background: url("../img/intro-welcome.svg") no-repeat;
+
+}
