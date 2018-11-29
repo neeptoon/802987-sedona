@@ -2,8 +2,10 @@
 <html lang="ru">
   	<head>
     	<meta charset="utf-8">
-    	<link rel="stylesheet"  href="css/style.css">
     	<title>Седона</title>
+    	<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    	<link rel="stylesheet" href="css/normalize.css">
+    	<link rel="stylesheet"  href="css/style.css">
 	</head>
 <body>
   	<header class="page-header">
@@ -21,16 +23,7 @@
   	</header>
   	<main>
 		<h1 class="visually-hidden">Аренда жилья в Седоне</h1>
-		<section class="image">
-			<div class="block1">
-				<div class="block2"></div>
-			</div>
-			<!--<img src="img/mountains.jpg" alt="Холмы Седоны" width="50%" height="50%">
-			<span>Welcome</span>
-			<span>to the gorgeous</span>
-			<span>Sedona</span>
-			<span>"Because the Grand Canyon sucks!"</span>-->
-		</section>
+		<div class="hills-image"></div>
 		<section class="advantage">
 			<h2 class="visually-hidden">Преимущества Седоны</h2>
 			<p class="about-us">
@@ -42,15 +35,18 @@
 					<span class="caption">Настоящий городок</span><span class="subcaption">-№1- Седона - не аттракцион для туристов, там течет своя жизнь</span>
 					<img src="img/frontage.jpg" alt="Фасад гостиницы" width="60%" height="100%">
 				</li>
-				<li class="third housing">
-					<span class="caption">Жилье</span><span class="subcaption">Рекомендуем пожить в настоящем мотеле, все как в кино!</span>
-				</li>
-				<li class="third food">
-					<span class="caption">Еда</span><span class="subcaption">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</span>
-				</li>
-				<li class="third suvenirs">
-					<span class="caption">Сувениры</span><span class="subcaption">Не только китайского, но и местного производства!</span>
-
+				<li>
+					<ul>
+						<li class="third housing">
+							<span class="caption">Жилье</span><span class="subcaption">Рекомендуем пожить в настоящем мотеле, все как в кино!</span>
+						</li>
+						<li class="third food">
+							<span class="caption">Еда</span><span class="subcaption">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</span>
+						</li>
+						<li class="third suvenirs">
+							<span class="caption">Сувениры</span><span class="subcaption">Не только китайского, но и местного производства!</span>
+						</li>
+					</ul>
 				</li>
 				<li class="all-width right">
 					<span class="caption">Там есть мост дьявола</span><span class="subcaption">-№2- Да, по нему можно пройти! Конечно, если вы осмелитесь!</span>
@@ -80,14 +76,23 @@
 		<section class="modal">
 			<h3>Поиск гостиницы в Седоне</h3>
 				<form class="user" method="post" action="#">
-					<label for="arrival">Дата заезда:</label>
-					<input type="text" name="arrival-field" id="arrival" placeholder="24 апреля 2017">
-					<label for="depardue">Дата выезда:</label>
-					<input type="text" name="depardue-field" id="depardue" placeholder="4 июля 2017">
-					<label for="adults">Взрослые</label>
-					<input type="number" name="adults-field" id="adults" min="0" max="20" step="1">
-					<label for="children">Дети</label>
-					<input type="number" name="chidren-field" id="children" min="0" max="20" step="1">
+					<p class="all-field">
+						<label for="arrival">Дата заезда:</label>
+						<input type="text" name="arrival-field" id="arrival" placeholder="24 апреля 2017">
+					</p>
+					<p class="all-field">
+						<label for="depardue">Дата выезда:</label>
+						<input type="text" name="depardue-field" id="depardue" placeholder="4 июля 2017">
+					</p>
+					<p class="all-field">
+						<label for="adults">Взрослые</label>
+						<input type="number" name="adults-field" id="adults" min="0" max="20" step="1">
+					</p>
+					<p class="all-field">
+						<label for="children">Дети</label>
+						<input type="number" name="chidren-field" id="children" min="0" max="20" step="1">
+					</p>
+					<br>
 					<button class="search-button">Найти</button>
 				</form>
 		</section>
