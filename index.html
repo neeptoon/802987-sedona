@@ -73,29 +73,6 @@
 				<img src="img/map.jpg" alt="Карта Седоны" width="50%" height="50%">
 			</p>
 		</section>
-		<section class="modal">
-			<h3>Поиск гостиницы в Седоне</h3>
-				<form class="user" method="post" action="#">
-					<p class="all-field">
-						<label for="arrival">Дата заезда:</label>
-						<input type="text" name="arrival-field" id="arrival" placeholder="24 апреля 2017">
-					</p>
-					<p class="all-field">
-						<label for="depardue">Дата выезда:</label>
-						<input type="text" name="depardue-field" id="depardue" placeholder="4 июля 2017">
-					</p>
-					<p class="all-field">
-						<label for="adults">Взрослые</label>
-						<input type="number" name="adults-field" id="adults" min="0" max="20" step="1">
-					</p>
-					<p class="all-field">
-						<label for="children">Дети</label>
-						<input type="number" name="chidren-field" id="children" min="0" max="20" step="1">
-					</p>
-					<br>
-					<button class="search-button">Найти</button>
-				</form>
-		</section>
   	</main>
 	<footer class="page-footer">
 		<p class="contacts">#visitsedona</p>
@@ -111,5 +88,34 @@
 			<a href="https://htmlacademy.ru/intensive/htmlcss"><img src="#" alt="Логотип академии" width="50px" height="50px"></a>
 		</p>
 	</footer>
+	<section class="modal">
+			<h3>Поиск гостиницы в Седоне</h3>
+				<form class="user" method="post" action="#">
+					<p class="all-field">
+						<label for="arrival">Дата заезда:</label>
+						<input type="text" name="arrival-field" id="arrival" placeholder="24 апреля 2017">
+						<button class="button-input" type="button"><img src="img/calendar.svg" alt="Кнопка выбора даты"></button>
+					</p>
+					<p class="all-field">
+						<label for="depardue">Дата выезда:</label>
+						<input type="text" name="depardue-field" id="depardue" placeholder="4 июля 2017">
+						<button class="button-input" type="button"><img src="img/calendar.svg" alt="Кнопка выбора даты"></button>
+					</p>
+					<p class="all-field">
+						<label for="adults">Взрослые</label>
+						<button class="button-input" type="button"><img src="img/plus.png" alt="Кнопка плюс"></button>
+						<input type="number" name="adults-field" id="adults" min="0" max="20" step="1">
+						<button class="button-input" type="button"><img src="img/minus.png" alt="Кнопка минус"></button>
+					</p>
+					<p class="all-field">
+						<label for="children">Дети</label>
+						<button class="button-input" type="button"><img src="img/plus.png" alt="Кнопка плюс"></button>
+						<input type="number" name="chidren-field" id="children" min="0" max="20" step="1">
+						<button class="button-input" type="button"><img src="img/minus.png" alt="Кнопка минус"></button>
+					</p>
+					<br>
+					<button class="search-button">Найти</button>
+				</form>
+		</section>
 </body>
 </html>
