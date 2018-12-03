@@ -11,7 +11,37 @@ body {
 	background-color: #ffffff;
 }
 
+a {
+	text-decoration: none;
+}
 
+.page-navigation {
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 26px;
+	color: #000000;
+
+	background-color: #ffffff;
+}
+
+.navigation-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+
+.navigation-list a {
+	color: #000000;
+}
+
+.navigation-list a:hover {
+	color: #81b3d2;
+}
+
+.navigation-list a:focus {
+	color: #6a6a6a;
+}
 
 .hills-image {
 	width: 1200px;
@@ -24,6 +54,137 @@ body {
 	background-size: 50%, contain;
 }
 
+.about-us {
+	text-align: center;
+}
+
+.caption {
+	font-size: 21px;
+	font-weight: bold;
+	line-height: 26px;
+	color: #000000;
+}
+
+.subcaption {
+	font-size: 14px;
+	line-height: 26px;
+	color: #000000
+}
+
+.advantage-list,
+.advantage-list ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.all-width .caption,
+.all-width .subcaption {
+	color: #ffffff;
+
+	background-color: #81b3d2;
+}
+
+.desc .caption {
+	font-size: 30px;
+}
+
+.offer .form-active-button {
+	font-size: 21px;
+	font-weight:bold;
+	line-height: 26px;
+	color: #ffffff;
+	text-transform: uppercase;
+
+	background-color: #766357;
+}
+
+.offer .form-active-button:hover {
+	background-color: #604e43;
+}
+
+.offer .form-active-button:focus {
+	background-color: #503e33;
+	color: #857871;
+}
+
+.page-footer .contacts {
+	font-size: 21px;
+	font-weight: bold;
+	line-height:26px;
+	color: #000000;
+}
+
+.page-footer .social-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.page-footer .footer-caption {
+	font-size: 14px;
+	font-weight: regular;
+	line-height:26px;
+}
+
+.search-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+/*
+.modal h3 {
+	font-size: 21px;
+	font-weight: bold;
+	line-height: 26px;
+	color: #ffffff;
+
+	background-color: #766357
+}
+*/
+
+.all-field label {
+	font-size: 14px;
+	font-weight: bold;
+	line-height:26px;
+	color: #000000;
+}
+
+.all-field input {
+	background-color: #f2f2f2;
+}
+
+.all-field input:hover {
+	background-color: #ebebeb;
+}
+
+.all-field input:focus {
+	background-color: #ffffff;
+}
+
+
+.search-form .search-button {
+	font-size: 21px;
+	font-weight: bold;
+	line-height: 26px;
+	color: #ffffff;
+	text-transform: uppercase;
+
+	background-color: #81b3d2;
+}
+
+.search-form .search-button:hover {
+	background-color: #669ec0;
+}
+
+.search-form .search-button:focus {
+	color: #88b6d1;
+	background-color: #5496bd;
+}
+
+
+
 /*Стили для внутренней страницы*/
 .choise {
 	display: block;
@@ -32,5 +193,84 @@ body {
 	background: url("../img/filterMountains.jpg") no-repeat;
 }
 
+fieldset {
+	border: none;
+}
 
+
+fieldset legend {
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 21px;
+	color: #ffffff;
+
+}
+
+.inner-field label {
+	font-size: 14px;
+	font-weight: regular;
+	line-height: 21px;
+	color: #ffffff;
+}
+
+.choise .field-list,
+.sort .sort-list,
+.hotels .hotels-list{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.found span:first-child {
+	font-size: 21px;
+	font-weight: bold;
+	line-height: 26px;
+}
+
+.found span:last-child {
+	font-size: 12px;
+	font-weight: regular;
+	line-height: 18px;
+}
+
+.button {
+	display: inline-block;
+	width: 110px;
+	height: 27px;
+
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 27px;
+	text-align: center;
+	vertical-align: middle;
+
+	color: #ffffff;
+}
+
+.button-reserved {
+	background-color: #766357;
+	width: 143px;
+}
+
+.button-details {
+	background-color: #81b3d2;
+}
+
+.button-reserved:hover {
+	background-color: #604e43;
+}
+
+.button-reserved:focus {
+	color: #857871;
+	background-color: #503e33;
+}
+
+.button-details:hover {
+	background-color: #669ec0;
+}
+
+.button-details:focus {
+	color: #88b6d1;
+	background-color: #5496bd;
+}
 

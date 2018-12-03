@@ -10,7 +10,7 @@
 <body>
   	<header class="page-header">
   		<nav class="page-navigation">
-  			<ul>
+  			<ul class="navigation-list">
   				<li><a href="#">Информация</a></li>
   				<li><a href="#">Фото и видео</a></li>
   				<li><a href="#">Карта штата</a></li>
@@ -27,10 +27,11 @@
 		<section class="advantage">
 			<h2 class="visually-hidden">Преимущества Седоны</h2>
 			<p class="about-us">
-				<span class="caption">Седона - небольшой городок в Аризоне, заслуживающий большего!</span>
+				<span class="caption">Седона - небольшой городок в Аризоне,<br> заслуживающий большего!</span>
+				<br>
 				<span class="subcaption">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</span>
 			</p>
-			<ul>
+			<ul class="advantage-list">
 				<li class="all-width left">
 					<span class="caption">Настоящий городок</span><span class="subcaption">-№1- Седона - не аттракцион для туристов, там течет своя жизнь</span>
 					<img src="img/frontage.jpg" alt="Фасад гостиницы" width="60%" height="100%">
@@ -69,6 +70,7 @@
 				<span class="caption">Заинтересовались?</span>
 				<span class="subcaption">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</span>
 			</p>
+			<button type="button" class="form-active-button" name="form-button">Поиск гостиницы в Седоне</button>
 			<p class="map">
 				<img src="img/map.jpg" alt="Карта Седоны" width="50%" height="50%">
 			</p>
@@ -77,7 +79,7 @@
 	<footer class="page-footer">
 		<p class="contacts">#visitsedona</p>
 		<div class="social">
-			<ul>
+			<ul class="social-list">
           		<li><a class="social-button" href="#">Твиттер</a></li>
           		<li><a class="social-button" href="#">Фейсбук</a></li>
           		<li><a class="social-button" href="#">Ютуб</a></li>
@@ -89,32 +91,34 @@
 		</p>
 	</footer>
 	<section class="modal">
-			<h3>Поиск гостиницы в Седоне</h3>
-				<form class="user" method="post" action="#">
-					<p class="all-field">
-						<label for="arrival">Дата заезда:</label>
-						<input type="text" name="arrival-field" id="arrival" placeholder="24 апреля 2017">
-						<button class="button-input" type="button"><img src="img/calendar.svg" alt="Кнопка выбора даты"></button>
-					</p>
-					<p class="all-field">
-						<label for="depardue">Дата выезда:</label>
-						<input type="text" name="depardue-field" id="depardue" placeholder="4 июля 2017">
-						<button class="button-input" type="button"><img src="img/calendar.svg" alt="Кнопка выбора даты"></button>
-					</p>
-					<p class="all-field">
-						<label for="adults">Взрослые</label>
-						<button class="button-input" type="button"><img src="img/plus.png" alt="Кнопка плюс"></button>
-						<input type="number" name="adults-field" id="adults" min="0" max="20" step="1">
-						<button class="button-input" type="button"><img src="img/minus.png" alt="Кнопка минус"></button>
-					</p>
-					<p class="all-field">
-						<label for="children">Дети</label>
-						<button class="button-input" type="button"><img src="img/plus.png" alt="Кнопка плюс"></button>
-						<input type="number" name="chidren-field" id="children" min="0" max="20" step="1">
-						<button class="button-input" type="button"><img src="img/minus.png" alt="Кнопка минус"></button>
-					</p>
+			<h3 class="visually-hidden">Поиск гостиницы в Седоне</h3>
+				<form class="search-form" method="post" action="#">
+					<ul class="search-list">
+						<li class="all-field">
+							<label for="arrival">Дата заезда:</label>
+							<input type="text" name="arrival-field" id="arrival" placeholder="24 апреля 2017">
+							<button class="button-input" type="button"><img src="img/calendar.svg" alt="Кнопка выбора даты"></button>
+						</li>
+						<li class="all-field">
+							<label for="depardue">Дата выезда:</label>
+							<input type="text" name="depardue-field" id="depardue" placeholder="4 июля 2017">
+							<button class="button-input" type="button"><img src="img/calendar.svg" alt="Кнопка выбора даты"></button>
+						</li>
+						<li class="all-field">
+							<label for="adults">Взрослые</label>
+							<button class="button-input" type="button"><img src="img/plus.png" alt="Кнопка плюс"></button>
+							<input type="number" name="adults-field" id="adults" min="0" max="20" step="1">
+							<button class="button-input" type="button"><img src="img/minus.png" alt="Кнопка минус"></button>
+						</li>
+						<li class="all-field">
+							<label for="children">Дети</label>
+							<button class="button-input" type="button"><img src="img/plus.png" alt="Кнопка плюс"></button>
+							<input type="number" name="chidren-field" id="children" min="0" max="20" step="1">
+							<button class="button-input" type="button"><img src="img/minus.png" alt="Кнопка минус"></button>
+						</li>
+					</ul>
 					<br>
-					<button class="search-button">Найти</button>
+					<button type="button" class="search-button">Найти</button>
 				</form>
 		</section>
 </body>
