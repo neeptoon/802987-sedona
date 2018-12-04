@@ -90,6 +90,8 @@ a {
 }
 
 .offer .form-active-button {
+	padding: 0;
+
 	font-size: 21px;
 	font-weight:bold;
 	line-height: 26px;
@@ -97,6 +99,7 @@ a {
 	text-transform: uppercase;
 
 	background-color: #766357;
+	border: none;
 }
 
 .offer .form-active-button:hover {
@@ -219,6 +222,51 @@ fieldset legend {
 	margin: 0;
 	padding: 0;
 	list-style: none;
+}
+
+.sort p {
+	display: inline-block;
+}
+
+.sort .sort-list {
+	display: inline-block;
+}
+
+.sort-list li {
+	display: inline-block;
+}
+
+.sort-item a {
+	font-size: 12px;
+	font-weight: regular;
+	line-height: 18px;
+	color: #857871;
+
+	border-bottom: 1px dotted #81b3d2;
+}
+
+.sort-item a:hover {
+	font-size: 12px;
+	font-weight: regular;
+	line-height: 18px;
+	color: #81b3d2
+
+	border-bottom: 1px dotted #81b3d2;
+}
+
+.sort-item a:focus {
+	font-size: 12px;
+	font-weight: regular;
+	line-height: 18px;
+	color: #000000
+
+	border-bottom: none;
+}
+
+.sort-list .sort-button,
+.sort-list .sort-button:hover,
+.sort-list .sort-button:focus {
+	border: none;
 }
 
 .found span:first-child {
