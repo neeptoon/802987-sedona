@@ -8,7 +8,7 @@
     	<link rel="stylesheet"  href="css/style.css">
 	</head>
 <body>
-  	<header class="page-header">
+  	<header class="container">
   		<nav class="page-navigation">
   			<ul class="navigation-list">
   				<li><a href="#">Информация</a></li>
@@ -17,11 +17,11 @@
   				<li><a href="#">Гостиницы</a></li>
   			</ul>
   			<a class="logo">
-  				<img src="img/logo-sedona.svg" alt="Логотип сайта Седона" width="200px" height="200px">
+  				<img src="img/logo-sedona.svg" alt="Логотип сайта Седона">
   			</a>
   		</nav>
   	</header>
-  	<main>
+  	<main class="container">
 		<h1 class="visually-hidden">Аренда жилья в Седоне</h1>
 		<div class="hills-image"></div>
 		<section class="advantage">
@@ -32,9 +32,15 @@
 				<span class="subcaption">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</span>
 			</p>
 			<ul class="advantage-list">
-				<li class="all-width left">
-					<span class="caption">Настоящий городок</span><span class="subcaption">-№1- Седона - не аттракцион для туристов, там течет своя жизнь</span>
-					<img src="img/frontage.jpg" alt="Фасад гостиницы" width="60%" height="100%">
+				<li class="all-width">
+					<p class="docket left">
+						<span class="caption">Настоящий городок</span>
+						<br>
+						<span class="subcaption">-№1- Седона - не аттракцион для туристов, там течет своя жизнь</span>
+					</p>
+					<p class="image left">
+						<img src="img/frontage.jpg" alt="Фасад гостиницы">
+					</p>
 				</li>
 				<li>
 					<ul>
@@ -49,48 +55,37 @@
 						</li>
 					</ul>
 				</li>
-				<li class="all-width right">
-					<span class="caption">Там есть мост дьявола</span><span class="subcaption">-№2- Да, по нему можно пройти! Конечно, если вы осмелитесь!</span>
-					<img src="img/canyon.jpg" alt="Каньон" width="60%" height="100%">
+				<li class="all-width">
+					<p class="docket right">
+						<span class="caption">Там есть мост дьявола</span><span class="subcaption">-№2- Да, по нему можно пройти! Конечно, если вы осмелитесь!</span>
+					</p>
+					<p class="image right">
+						<img src="img/canyon.jpg" alt="Каньон">
+					</p>
 				</li>
-				<li class="third square">
-					<span class="caption">Небольшая плошадь</span><span class="subcaption">-№3- Все достопримечательности находятся очень близко</span>
-				</li>
-				<li class="third routh">
-					<span class="caption">Красивая дорога</span><span class="subcaption">-№4- Ехать в Седону из Лас-Вегаса совсем не скучно!</span>
-				</li>
-				<li class="third tour">
-					<span class="caption">Мало туристов</span><span class="subcaption">-№5- Большинство едет в Гранд Каньон и толпится там</span>
+				<li>
+					<ul>
+						<li class="third square">
+							<span class="caption">Небольшая плошадь</span><span class="subcaption">-№3- Все достопримечательности находятся очень близко</span>
+						</li>
+						<li class="third routh">
+							<span class="caption">Красивая дорога</span><span class="subcaption">-№4- Ехать в Седону из Лас-Вегаса совсем не скучно!</span>
+						</li>
+						<li class="third tour">
+							<span class="caption">Мало туристов</span><span class="subcaption">-№5- Большинство едет в Гранд Каньон и толпится там</span>
+						</li>
+					</ul>
 				</li>
 			</ul>
 		</section>
-		<section class="offer">
+		<section class="offer container">
 			<h2 class="visually-hidden">Предложения гостиниц в седоне</h2>
 			<p class="desc">
 				<span class="caption">Заинтересовались?</span>
-				<span class="subcaption">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</span>
+				<span class="subcaption">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</span>
 			</p>
 			<button type="button" class="form-active-button" name="form-button">Поиск гостиницы в Седоне</button>
-			<p class="map">
-				<img src="img/map.jpg" alt="Карта Седоны" width="50%" height="50%">
-			</p>
-		</section>
-  	</main>
-	<footer class="page-footer">
-		<p class="contacts">#visitsedona</p>
-		<div class="social">
-			<ul class="social-list">
-          		<li><a class="social-button" href="#">Твиттер</a></li>
-          		<li><a class="social-button" href="#">Фейсбук</a></li>
-          		<li><a class="social-button" href="#">Ютуб</a></li>
-        	</ul>
-		</div>
-		<p class="developer">
-			<span class="footer-caption">website by</span>
-			<a href="https://htmlacademy.ru/intensive/htmlcss"><img src="#" alt="Логотип академии" width="50px" height="50px"></a>
-		</p>
-	</footer>
-	<section class="modal">
+			<section class="modal">
 			<h3 class="visually-hidden">Поиск гостиницы в Седоне</h3>
 				<form class="search-form" method="post" action="#">
 					<ul class="search-list">
@@ -117,9 +112,29 @@
 							<button class="button-input" type="button"><img src="img/minus.png" alt="Кнопка минус"></button>
 						</li>
 					</ul>
-					<br>
 					<button type="button" class="search-button">Найти</button>
 				</form>
 		</section>
+		</section>
+		<section class="map container">
+				<img src="img/map.jpg" alt="Карта Седоны">
+		</section>
+  	</main>
+	<footer class="container">
+		<div class="page-footer">
+			<p class="contacts">#visitsedona</p>
+			<div class="social">
+				<ul class="social-list">
+          			<li><a class="social-button" href="#">Твиттер</a></li>
+          			<li><a class="social-button" href="#">Фейсбук</a></li>
+          			<li><a class="social-button" href="#">Ютуб</a></li>
+        		</ul>
+			</div>
+			<p class="developer">
+				<span class="footer-caption">website by</span>
+				<a href="https://htmlacademy.ru/intensive/htmlcss"><img src="#" alt="Логотип академии" width="50px" height="50px"></a>
+			</p>
+		</div>
+	</footer>
 </body>
 </html>

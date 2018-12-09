@@ -2,7 +2,8 @@ body {
 	margin: 0;
 	padding: 0;
 
-	font-family: "PT Sans", Arial; sans-serif;
+
+	font-family: "PT Sans", Arial, sans-serif;
 	font-size: 14px;
 	line-height: 26px;
 	color: #000000;
@@ -11,23 +12,81 @@ body {
 	background-color: #ffffff;
 }
 
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden
+{
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 a {
 	text-decoration: none;
 }
 
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  box-shadow: 0px 0px 2px 2px red;
+  background-color: #f2f2f2;
+}
+
+
 .page-navigation {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	min-height: 60px;
+	margin-bottom: 0;
 	font-size: 14px;
 	font-weight: bold;
 	line-height: 26px;
 	color: #000000;
 
 	background-color: #ffffff;
+	outline: 2px dashed aqua;
 }
 
 .navigation-list {
+	display: flex;
+	justify-content: space-around;
 	margin: 0;
 	padding: 0;
+	min-width: 1200px;
+
 	list-style: none;
+	outline: 2px dashed olive;
+
 }
 
 
@@ -43,18 +102,49 @@ a {
 	color: #6a6a6a;
 }
 
+.navigation-list a:active {
+	color: #766357;
+}
+
+.logo img {
+	position: absolute;
+	right: 720px;
+
+	width: 140px;
+	height: 70px;
+
+	outline: 2px dashed navy;
+}
+
 .hills-image {
 	width: 1200px;
-	height: 680px;
+	height: 725px;
 	background-image:
+		url("../img/mask-repeat.jpg"),
+		url("../img/intro-mask.svg"),
 		url("../img/intro-welcome.svg"),
 		url("../img/mountains.jpg");
-	background-repeat: no-repeat, no-repeat;
-	background-position: center, center;
-	background-size: 50%, contain;
+	background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+	background-position: 0 500px, center 445px, 50% 73px, center;
+	background-size: 100%, 100%, 38%, cover;
+
+	outline: 2px dashed gray;
+}
+
+.advantage {
+	position: relative;
+}
+
+.about-us span {
+	display: block;
 }
 
 .about-us {
+	position: absolute;
+	top: -160px;
+	right: 360px;
+	margin: 0;
+
 	text-align: center;
 }
 
@@ -71,25 +161,70 @@ a {
 	color: #000000
 }
 
-.advantage-list,
-.advantage-list ul {
+
+
+.advantage-list {
 	margin: 0;
 	padding: 0;
 	list-style: none;
+
+	outline: 2px dashed purple;
 }
 
-.all-width .caption,
-.all-width .subcaption {
-	color: #ffffff;
+.advantage-list .all-width {
+	display: flex;
 
-	background-color: #81b3d2;
+	outline: 4px dashed aqua;
+}
+
+.advantage-list li > ul {
+	display: flex;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	outline: 2px dashed green;
+}
+
+
+.offer {
+	position: relative;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	margin: 0;
+	padding: 0;
+
+	align-items: center;
+
+	background-color: #ffffff;
+	outline: 2px dashed teal;
+}
+
+.offer .desc {
+	margin-top: 57px;
+	margin-bottom: 50px;
 }
 
 .desc .caption {
+	display: block;
+	margin-bottom: 30px;
+
 	font-size: 30px;
+	text-align: center;
+}
+
+.desc .subcaption {
+	display: block;
+
+	text-align: center;
 }
 
 .offer .form-active-button {
+	display: block;
+	width: 575px;
+	height: 85px;
 	padding: 0;
 
 	font-size: 21px;
@@ -111,17 +246,57 @@ a {
 	color: #857871;
 }
 
+.map {
+	margin: 0;
+	padding: 0;
+
+	outline: 2px dashed lime;
+}
+
+.map img {
+	width: 1200px;
+	height: 595px;
+}
+
+.page-footer {
+	display: flex;
+	justify-content: space-around;
+	align-items: baseline;
+	background: rgba(250, 250, 250, 0.9);
+	padding: 0 40px;
+	outline: 2px dashed lime;
+}
+
+.social .social-list {
+	display: flex;
+	list-style: none;
+}
+
+
+
 .page-footer .contacts {
 	font-size: 21px;
 	font-weight: bold;
 	line-height:26px;
 	color: #000000;
+
+	outline: 2px dashed maroon;
 }
 
 .page-footer .social-list {
 	margin: 0;
 	padding: 0;
 	list-style: none;
+
+	outline: 2px dashed maroon;
+
+}
+
+.page-footer .developer {
+	margin: 0;
+	padding: 0;
+
+	outline: 2px dashed maroon;
 }
 
 .page-footer .footer-caption {
@@ -130,10 +305,50 @@ a {
 	line-height:26px;
 }
 
+
+
+.modal .search-form {
+	position: absolute;
+	left: 312px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	width: 575px;
+	height: 400px;
+	box-sizing: border-box;
+
+	background-color: #ffffff;
+}
+
+.search-form ul {
+	display: flex;
+	flex-direction: column;
+	align-items: space-around;
+	margin: 55px 0;
+
+	outline: 2px dashed maroon;
+}
+
 .search-list {
 	margin: 0;
 	padding: 0;
 	list-style: none;
+
+	outline: 2px dashed maroon;
+}
+
+.search-list li {
+	margin: 0 auto;
+	outline: 2px dashed navy;
+}
+
+.search-form .search-button {
+	width: 460px;
+	height: 60px;
+	margin: 0 auto;
+	margin-bottom: 55px;
+
 }
 
 /*
@@ -146,6 +361,8 @@ a {
 	background-color: #766357
 }
 */
+
+
 
 .all-field label {
 	font-size: 14px;
@@ -190,10 +407,15 @@ a {
 
 /*Стили для внутренней страницы*/
 .choise {
-	display: block;
-	width: 100%;
-	height: 500px;
-	background: url("../img/filterMountains.jpg") no-repeat;
+	min-height: 220px;
+
+	outline: 2px dashed lime;
+	background: url("../img/filterMountains.jpg") no-repeat center;
+}
+
+.choise form {
+	display: flex;
+	justify-content: space-around;
 }
 
 fieldset {
@@ -216,16 +438,25 @@ fieldset legend {
 	color: #ffffff;
 }
 
+/*Стили для всех списков на странице*/
+
 .choise .field-list,
 .sort .sort-list,
-.hotels .hotels-list{
+.hotels .hotels-list,
+.item > ul,
+.item > ul > li > ul {
 	margin: 0;
 	padding: 0;
 	list-style: none;
 }
 
-.sort p {
-	display: inline-block;
+/*Стили для блока сортировки*/
+
+.sort  {
+	display: flex;
+	align-items: baseline;
+
+	outline: 2px dashed maroon;
 }
 
 .sort .sort-list {
@@ -238,7 +469,7 @@ fieldset legend {
 
 .sort-item a {
 	font-size: 12px;
-	font-weight: regular;
+	font-weight: normal;
 	line-height: 18px;
 	color: #857871;
 
@@ -247,26 +478,46 @@ fieldset legend {
 
 .sort-item a:hover {
 	font-size: 12px;
-	font-weight: regular;
+	font-weight: normal;
 	line-height: 18px;
-	color: #81b3d2
+	color: #81b3d2;
 
 	border-bottom: 1px dotted #81b3d2;
 }
 
 .sort-item a:focus {
 	font-size: 12px;
-	font-weight: regular;
+	font-weight: normal;
 	line-height: 18px;
-	color: #000000
+	color: #000000;
 
 	border-bottom: none;
 }
 
-.sort-list .sort-button,
-.sort-list .sort-button:hover,
-.sort-list .sort-button:focus {
-	border: none;
+.sort-item a:active {
+	font-size: 12px;
+	font-weight: normal;
+	line-height: 18px;
+	color: #81b3d2;
+
+	border-bottom: none;
+}
+
+.sort-button-up a {
+	display: block;
+	width: 25px;
+	height: 25px;
+	background:  url("../img/icon-up-dir.svg") no-repeat 50% 50%;
+
+}
+
+
+.sort-button-down a {
+	display: block;
+	width: 25px;
+	height: 25px;
+	background:  url("../img/icon-down-dir.svg") no-repeat 50% 50%;
+
 }
 
 .found span:first-child {
@@ -280,6 +531,49 @@ fieldset legend {
 	font-weight: regular;
 	line-height: 18px;
 }
+
+/*Стили для карточек отелей*/
+
+.hotels .hotels-list {
+	display: flex;
+	flex-direction: column;
+
+	outline: 2px dashed orange;
+
+}
+
+.item > ul {
+	display: flex;
+	justify-content: space-around;
+	min-height: 155px;
+
+	outline: 3px dashed cyan;
+}
+
+.item > ul > li {
+	outline: 2px dashed navy;
+}
+
+
+
+.column-2 ul li {
+	outline: 2px dashed maroon;
+
+}
+
+.hotel-view,
+.price {
+	display: inline-block;
+
+	outline: 2px dashed lime;
+}
+
+.column-3 span {
+	display: block;
+}
+
+
+
 
 .button {
 	display: inline-block;
