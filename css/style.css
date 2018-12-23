@@ -195,7 +195,7 @@ img {
 
 .advantage-list .all-width {
 	display: flex;
-	height: 255px;
+	height: 256px;
 
 }
 
@@ -491,7 +491,6 @@ img {
 	margin-right: 10px;
 
 	font-size: 14px;
-	font-weight: regular;
 	line-height:26px;
 }
 
@@ -513,7 +512,7 @@ img {
 .search-form .search-list {
 	display: flex;
 	flex-wrap: wrap;
-	margin: 45px 5px 0;
+	margin: 40px 5px 0;
 }
 
 .search-list {
@@ -554,6 +553,7 @@ img {
 .half input {
 	width: 25px;
 	padding: 0;
+	padding-left: 5px;
 	margin: 0 -4px;
 
 	border: none;
@@ -572,8 +572,6 @@ img {
 	width: 65px;
 }
 
-
-
 .all-field .button-input {
 	width: 45px;
 	height: 40px;
@@ -584,8 +582,22 @@ img {
 	vertical-align: top;
 
 	border: none;
+	outline: none;
 
 	background-color: #f2f2f2;
+}
+
+.cal-icon {
+	fill: #d4d4d4;
+}
+
+.button-input:hover .cal-icon,
+.button-input:focus .cal-icon {
+	fill: #000000;
+}
+
+.button-input:active .cal-icon {
+	fill: #81b3d2;
 }
 
 .search-form .search-button {
@@ -593,6 +605,9 @@ img {
 	height: 60px;
 	margin: 0 auto;
 	margin-bottom: 55px;
+
+	outline: none;
+	border: none;
 }
 
 .all-field label {
@@ -611,10 +626,12 @@ img {
 
 .all-field input:hover {
 	background-color: #ebebeb;
+	outline: none;
 }
 
 .all-field input:focus {
 	background-color: #ffffff;
+	outline: 1px solid #ebebeb;
 }
 
 
@@ -640,14 +657,15 @@ img {
 
 /*Стили для внутренней страницы*/
 .choise {
-	min-height: 220px;
+	min-height: 217px;
+	margin-top: -4px;
 
 	background: url("../img/filterMountains.jpg") no-repeat center;
 }
 
 .choise form {
 	display: flex;
-	justify-content: space-around;
+	justify-content: flex-start;
 }
 
 fieldset {
@@ -663,11 +681,178 @@ fieldset legend {
 
 }
 
+.field {
+	min-width: 255px;
+	padding: 0;
+	margin: 0;
+}
+
+.field legend {
+	margin-bottom: 21px;
+	padding-top: 28px;
+	padding-left: 74px;
+}
+
 .inner-field label {
+
 	font-size: 14px;
-	font-weight: regular;
 	line-height: 21px;
+
 	color: #ffffff;
+}
+
+.inner-field {
+	position: relative;
+
+	margin-left: 75px;
+	margin-bottom: 20px;
+	padding-left: 35px;
+
+}
+
+.inner-field label:before {
+	position: absolute;
+	top: 0;
+	left: -1px;
+
+	content: "";
+
+	width: 32px;
+	height: 30px;
+
+	background: url("../img/checkbox-off.svg") no-repeat;
+
+}
+
+.inner-field input[type="checkbox"]:checked + label:before {
+	position: absolute;
+	top: 0;
+	left: -1px;
+
+	content: "";
+
+	width: 32px;
+	height: 30px;
+
+	background: url("../img/checkbox-on.svg") no-repeat;
+}
+
+form fieldset:nth-child(2) {
+	margin-right: 230px;
+}
+
+.second-field legend {
+	margin-bottom: 9px;
+}
+
+.price-field {
+	position: relative;
+
+	width: 313px;
+	height: 31px;
+	margin-left: 72px;
+	margin-bottom: 20px;
+
+	border: 2px solid #ffffff;
+	border-radius: 2px;
+}
+
+.price-field::before {
+  content: "";
+  position: absolute;
+  top: 15%;
+  right: 50%;
+
+  width: 2px;
+  height: 22px;
+
+  background: #ffffff;
+}
+
+.price-field label {
+	padding-left: 65px;
+	padding-right: 5px;
+
+	vertical-align: middle;
+
+	color: #ffffff;
+
+	cursor: pointer;
+}
+
+.price-field input {
+	width: 60px;
+
+	vertical-align: middle;
+
+	border: none;
+	background: none;
+	color: #ffffff;
+	outline: none;
+}
+
+.range {
+	position: relative;
+
+	margin-bottom: 32px;
+}
+
+.scale {
+	height: 2px;
+	width: 310px;
+	margin-left: 75px;
+
+	background: #887e7e;
+}
+
+.bar {
+	width: 80%;
+	height: 2px;
+
+	background: #ffffff;
+}
+
+.range-toggle {
+	width: 4px;
+  	height: 4px;
+
+  	background: #ababab;
+  	border: 8px solid #ffffff;
+  	border-radius: 50%;
+
+  	cursor: pointer;
+}
+
+.range-toggle-min {
+	position: absolute;
+	top: -10px;
+	left: 71px;
+}
+
+.range-toggle-max {
+	position: absolute;
+	top: -10px;
+	left: 325px;
+}
+
+.form-button {
+	width: 137px;
+	height: 36px;
+	margin-left: 156px;
+
+	text-transform: uppercase;
+	color: #ffffff;
+
+	border: 2px solid #ffffff;
+	border-radius: 2px;
+	outline: none;
+	background: none;
+	box-sizing: border-box;
+}
+
+.form-button:hover {
+	background: #ffffff;
+	color: #000000;
 }
 
 /*Стили для всех списков на странице*/
@@ -688,7 +873,7 @@ fieldset legend {
 	display: flex;
 	align-items: baseline;
 
-	outline: 2px dashed maroon;
+	border-bottom: 1px solid #857871;
 }
 
 .sort .sort-list {
@@ -697,9 +882,17 @@ fieldset legend {
 
 .sort-list li {
 	display: inline-block;
+
+	margin-right: 29px;
+}
+
+.sort-list li:nth-child(3) {
+	margin-right: 500px;
 }
 
 .sort-item a {
+	display: block;
+
 	font-size: 12px;
 	font-weight: normal;
 	line-height: 18px;
@@ -739,8 +932,6 @@ fieldset legend {
 	display: block;
 	width: 25px;
 	height: 25px;
-	background:  url("../img/icon-up-dir.svg") no-repeat 50% 50%;
-
 }
 
 
@@ -748,19 +939,47 @@ fieldset legend {
 	display: block;
 	width: 25px;
 	height: 25px;
-	background:  url("../img/icon-down-dir.svg") no-repeat 50% 50%;
+}
 
+.sort-list .sort-button {
+	margin-right: -4px;
+}
+
+/*.sort-list li:nth-child(4) {
+	margin-left: 455px;
+}*/
+
+.sort-button:hover path {
+	fill: #000000;
+}
+
+.sort-button:focus path {
+	fill: #81b3d2;
+}
+
+.sort-button:active path {
+	fill: #81b3d2;
+}
+
+.found {
+	margin: 0;
+	padding: 30px 20px 27px 73px;
 }
 
 .found span:first-child {
+	display: inline-block;
+	padding-right: 45px;
+
 	font-size: 21px;
 	font-weight: bold;
 	line-height: 26px;
 }
 
 .found span:last-child {
+	display: inline-block;
+	padding-right: 20px;
+
 	font-size: 12px;
-	font-weight: regular;
 	line-height: 18px;
 }
 
@@ -769,43 +988,71 @@ fieldset legend {
 .hotels .hotels-list {
 	display: flex;
 	flex-direction: column;
+}
 
-	outline: 2px dashed orange;
-
+ul .item {
+	border-bottom: 1px solid #857871;
 }
 
 .item > ul {
 	display: flex;
-	justify-content: space-around;
-	min-height: 155px;
-
-	outline: 3px dashed cyan;
+	justify-content: flex-start;
 }
 
-.item > ul > li {
-	outline: 2px dashed navy;
+.column-1 {
+	padding: 29px 5px 23px 73px;
 }
 
+.column-2 {
+	width: 760px;
+	padding: 25px 5px 10px 25px;
+}
 
+.column-2 h3 {
+	margin: 0;
+}
 
-.column-2 ul li {
-	outline: 2px dashed maroon;
-
+.column-2 li:not(:last-child) {
+	margin-bottom: 5px;
 }
 
 .hotel-view,
 .price {
 	display: inline-block;
+	width: 110px;
+	margin-right: 5px;
+}
 
-	outline: 2px dashed lime;
+.column-3 {
+	position: relative;
 }
 
 .column-3 span {
 	display: block;
+	margin-left: 15px;
+
+	text-align: center;
+
+	background-color: #f2f2f2;
 }
 
+.stars-wrapper {
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 25px;
+	margin-bottom: 45px;
+	margin-left: 13px;
 
+}
 
+.column-3 .stars {
+	padding: 0;
+	margin: 0;
+	margin-right: -2px;
+	width: 25px;
+
+	background: #ffffff;
+}
 
 .button {
 	display: inline-block;

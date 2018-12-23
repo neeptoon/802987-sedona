@@ -35,15 +35,15 @@
 						<legend>Инфраструктура:</legend>
 						<ul class="field-list">
 							<li class="inner-field">
-								<input type="checkbox" name="pool-field" id="pool" checked>
+								<input type="checkbox" class="visually-hidden" name="pool-field" id="pool" checked>
 								<label for="pool">Бассейн</label>
 							</li>
 							<li class="inner-field">
-								<input type="checkbox" name="parking-field" id="parking">
+								<input type="checkbox" class="visually-hidden" name="parking-field" id="parking">
 								<label for="parking">Парковка</label>
 							</li>
 							<li class="inner-field">
-								<input type="checkbox" name="internet-field" id="internet">
+								<input type="checkbox" class="visually-hidden" name="internet-field" id="internet">
 								<label for="internet">Wi-Fi</label>
 							</li>
 						</ul>
@@ -52,28 +52,34 @@
 						<legend>Тип жилья:</legend>
 						<ul class="field-list">
 							<li class="inner-field">
-								<input type="checkbox" name="hotel-field" id="hotel" checked>
+								<input type="checkbox" class="visually-hidden" name="hotel-field" id="hotel" checked>
 								<label for="hotel">Гостиница</label>
 							</li>
 							<li class="inner-field">
-								<input type="checkbox" name="motel-field" id="motel" checked>
+								<input type="checkbox" class="visually-hidden" name="motel-field" id="motel" checked>
 								<label for="motel">Мотель</label>
 							</li>
 							<li class="inner-field">
-								<input type="checkbox" name="appartment-field" id="appartment" checked>
+								<input type="checkbox" class="visually-hidden" name="appartment-field" id="appartment" checked>
 								<label for="appartment">Аппартаменты</label>
 							</li>
 						</ul>
 					</fieldset>
 					<fieldset class="field second-field">
 						<legend>Стоимость в сутки (Р):</legend>
-						<ul class="field-list">
-							<li class="inner-field">
-								<input type="range" name="price-field" min="" max="" step="1">
-							</li>
-						</ul>
-							<button type="button" class="form-button">Показать</button>
-					</fieldset>
+						<div class="price-field">
+							<label for="price-min">от</label><input type="text" name="price-min" value="0" id="price-min">
+							<label for="price-max">до</label><input type="text" name="price-ьфч" value="3000" id="price-max">
+						</div>
+						<div class="range">
+							<div class="scale">
+         						<div class="bar"></div>
+        					</div>
+        					<div class="range-toggle range-toggle-min"></div>
+        					<div class="range-toggle range-toggle-max"></div>
+						</div>
+						<button type="button" class="form-button">Показать</button>
+ 					</fieldset>
 				</form>
 			</section>
 
@@ -92,14 +98,14 @@
 						<li class="sort-item">
 							<a href="#" class="sort">По рейтингу</a>
 						</li>
-						<li class="sort-button-up">
-							<a href="#"><span class="visually-hidden">Сортровка по возрастанию</span>
-								<!--<img src="img/icon-up-dir.svg" alt="Сортровка по возрастанию">-->
+						<li class="sort-button sort-button-up">
+							<a href="#">
+								<svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path fill="#cacaca" d="M5.5 0L0 10h11z"/></svg>
 							</a>
 						</li>
-						<li class="sort-button-down">
-							<a href="#"><span class="visually-hidden">Сортировка по убыванию</span>
-								<!--<img src="img/icon-down-dir.svg" alt="Сортировка по убыванию">-->
+						<li class="sort-button sort-button-down">
+							<a href="#">
+								<svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path fill="#cacaca" d="M5.5 10L0 0h11"/></svg>
 							</a>
 						</li>
 					</ul>
@@ -110,11 +116,13 @@
 				<ul class="hotels-list">
 					<li class="item">
 						<ul>
-							<li class="column-1"><a href="#"><img src="img/sunset.jpg" alt="Фотография отеля" width="100px" height="50px"></a></li>
+							<li class="column-1">
+								<a href="#"><img src="img/sunset.jpg" alt="Фотография отеля"></a>
+							</li>
 							<li class="column-2">
 								<ul>
 									<li>
-										<h3><a href="#"><span class="caption">Amara resort & spa</span></a></h3>
+										<h3><a href="#"><span class="caption"> Amara resort & SPA </span></a></h3>
 									</li>
 									<li>
 										<span class="subcaptoin hotel-view">Гостиница</span>
@@ -127,15 +135,22 @@
 								</ul>
 							</li>
 							<li class="column-3">
-								<span> <img src="img/star.svg"></span>
+								<p class="stars-wrapper">
+									<span class="stars"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17"><path fill="#ffffff" d="M9.002 0l2.126 6.494h6.877l-5.564 4.012L14.566 17l-5.564-4.013L3.438 17l2.126-6.494L0 6.494h6.878z"/></svg></span>
+									<span class="stars"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17"><path fill="#81B3D2" d="M9.002 0l2.126 6.494h6.877l-5.564 4.012L14.566 17l-5.564-4.013L3.438 17l2.126-6.494L0 6.494h6.878z"/></svg></span>
+									<span class="stars"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17"><path fill="#81B3D2" d="M9.002 0l2.126 6.494h6.877l-5.564 4.012L14.566 17l-5.564-4.013L3.438 17l2.126-6.494L0 6.494h6.878z"/></svg></span>
+									<span class="stars"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17"><path fill="#81B3D2" d="M9.002 0l2.126 6.494h6.877l-5.564 4.012L14.566 17l-5.564-4.013L3.438 17l2.126-6.494L0 6.494h6.878z"/></svg></span>
+									<span class="stars"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17"><path fill="#81B3D2" d="M9.002 0l2.126 6.494h6.877l-5.564 4.012L14.566 17l-5.564-4.013L3.438 17l2.126-6.494L0 6.494h6.878z"/></svg></span>
+								</p>
 								<span class="subcaption">Рейтинг: 8,5</span>
-
 							</li>
 						</ul>
 					</li>
 					<li class="item">
 						<ul>
-							<li class="column-1"><a href="#"><img src="img/signboard.jpg" alt="Фотография отеля" width="100px" height="50px"></a></li>
+							<li class="column-1">
+								<a href="#"><img src="img/signboard.jpg" alt="Фотография отеля"></a>
+							</li>
 							<li class="column-2">
 								<ul>
 									<li>
@@ -152,14 +167,22 @@
 								</ul>
 							</li>
 							<li class="column-3">
-								<span> <img src="img/star.svg"></span>
+								<p class="stars-wrapper">
+									<span class="stars"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17"><path fill="#ffffff" d="M9.002 0l2.126 6.494h6.877l-5.564 4.012L14.566 17l-5.564-4.013L3.438 17l2.126-6.494L0 6.494h6.878z"/></svg></span>
+									<span class="stars"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17"><path fill="#ffffff" d="M9.002 0l2.126 6.494h6.877l-5.564 4.012L14.566 17l-5.564-4.013L3.438 17l2.126-6.494L0 6.494h6.878z"/></svg></span>
+									<span class="stars"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17"><path fill="#81B3D2" d="M9.002 0l2.126 6.494h6.877l-5.564 4.012L14.566 17l-5.564-4.013L3.438 17l2.126-6.494L0 6.494h6.878z"/></svg></span>
+									<span class="stars"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17"><path fill="#81B3D2" d="M9.002 0l2.126 6.494h6.877l-5.564 4.012L14.566 17l-5.564-4.013L3.438 17l2.126-6.494L0 6.494h6.878z"/></svg></span>
+									<span class="stars"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17"><path fill="#81B3D2" d="M9.002 0l2.126 6.494h6.877l-5.564 4.012L14.566 17l-5.564-4.013L3.438 17l2.126-6.494L0 6.494h6.878z"/></svg></span>
+								</p>
 								<span class="subcaption">Рейтинг: 8,9</span>
 							</li>
 						</ul>
 					</li>
 					<li class="item">
 						<ul>
-							<li class="column-1"><a href="#"><img src="img/lawn.jpg" alt="Фотография отеля" width="100px" height="50px"></a></li>
+							<li class="column-1">
+								<a href="#"><img src="img/lawn.jpg" alt="Фотография отеля" ></a>
+							</li>
 							<li class="column-2">
 								<ul>
 									<li>
@@ -176,7 +199,13 @@
 								</ul>
 							</li>
 							<li class="column-3">
-								<span> <img src="img/star.svg"></span>
+								<p class="stars-wrapper">
+									<span class="stars"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17"><path fill="#ffffff" d="M9.002 0l2.126 6.494h6.877l-5.564 4.012L14.566 17l-5.564-4.013L3.438 17l2.126-6.494L0 6.494h6.878z"/></svg></span>
+									<span class="stars"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17"><path fill="#ffffff" d="M9.002 0l2.126 6.494h6.877l-5.564 4.012L14.566 17l-5.564-4.013L3.438 17l2.126-6.494L0 6.494h6.878z"/></svg></span>
+									<span class="stars"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17"><path fill="#ffffff" d="M9.002 0l2.126 6.494h6.877l-5.564 4.012L14.566 17l-5.564-4.013L3.438 17l2.126-6.494L0 6.494h6.878z"/></svg></span>
+									<span class="stars"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17"><path fill="#81B3D2" d="M9.002 0l2.126 6.494h6.877l-5.564 4.012L14.566 17l-5.564-4.013L3.438 17l2.126-6.494L0 6.494h6.878z"/></svg></span>
+									<span class="stars"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17"><path fill="#81B3D2" d="M9.002 0l2.126 6.494h6.877l-5.564 4.012L14.566 17l-5.564-4.013L3.438 17l2.126-6.494L0 6.494h6.878z"/></svg></span>
+								</p>
 								<span class="subcaption">Рейтинг: 9,2</span>
 							</li>
 						</ul>
