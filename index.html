@@ -6,10 +6,12 @@
     	<title>Седона</title>
     	<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
     	<link rel="stylesheet" href="css/normalize.css">
-    	<link rel="stylesheet"  href="css/style.css">
+    	<link rel="stylesheet"  href="css/styleMin.css">
 	</head>
 
 <body>
+	<div class="wrapper">
+	<div class="wrapper-shadow">
 
   	<header class="container">
   		<nav class="page-navigation">
@@ -17,7 +19,7 @@
   				<li><a href="#">Информация</a></li>
   				<li><a href="#">Фото и видео</a></li>
   				<li><a href="#">Карта штата</a></li>
-  				<li><a href="#">Гостиницы</a></li>
+  				<li><a href="inner.html">Гостиницы</a></li>
   			</ul>
   			<a class="logo">
   				<img src="img/logo-sedona.svg" alt="Логотип сайта Седона" width="140" height="70">
@@ -31,20 +33,19 @@
 		<section class="advantage">
 			<h2 class="visually-hidden">Преимущества Седоны</h2>
 			<p class="about-us">
-				<span class="caption">Седона - небольшой городок в Аризоне,<br> заслуживающий большего!</span>
-				<br>
+				<span class="caption">Седона — небольшой городок в Аризоне, заслуживающий большего!</span>
 				<span class="subcaption">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</span>
 			</p>
 			<ul class="advantage-list">
 
 				<li class="all-width">
 					<p class="docket">
-						<span class="caption">Настоящий <br> городок</span>
-						<span class="subcaption">-№1-</span>
-						<span class="subcaption">Седона - не аттракцион для туристов, <br> там течет своя жизнь</span>
+						<span class="caption">Настоящий городок</span>
+						<span class="subcaption">—№1—</span>
+						<span class="subcaption">Седона — не аттракцион для туристов, там течет своя жизнь</span>
 					</p>
 					<p class="image">
-						<img src="img/frontage.jpg" alt="Фасад гостиницы" width="800" height="255">
+						<img src="img/frontage.jpg" alt="Фасад гостиницы" width="800" height="250">
 					</p>
 				</li>
 
@@ -67,9 +68,9 @@
 
 				<li class="all-width left">
 					<p class="docket">
-						<span class="caption">Там есть <br> мост дьявола</span>
-						<span class="subcaption">-№2-</span>
-						<span class="subcaption">Да, по нему можно пройти! Если конечно <br> вы осмелитесь!</span>
+						<span class="caption">Там есть мост дьявола</span>
+						<span class="subcaption">—№2—</span>
+						<span class="subcaption">Да, по нему можно пройти! Если конечно вы осмелитесь!</span>
 					</p>
 					<p class="image">
 						<img src="img/canyon.jpg" alt="Каньон" width="800" height="255">
@@ -79,18 +80,18 @@
 				<li>
 					<ul class="fourth-row">
 						<li class="third square">
-							<span class="caption">Небольшая <br> плошадь</span>
-							<span class="subcaption">-№3-</span>
+							<span class="caption">Небольшая плошадь</span>
+							<span class="subcaption">—№3—</span>
 							<span class="subcaption">Все достопримечательности находятся очень близко</span>
 						</li>
 						<li class="third routh">
-							<span class="caption">Красивая <br> дорога</span>
-							<span class="subcaption">-№4-</span>
+							<span class="caption">Красивая дорога</span>
+							<span class="subcaption">—№4—</span>
 							<span class="subcaption">Ехать в Седону из Лас-Вегаса совсем не скучно!</span>
 						</li>
 						<li class="third tour">
-							<span class="caption">Мало <br> туристов</span>
-							<span class="subcaption">-№5-</span>
+							<span class="caption">Мало туристов</span>
+							<span class="subcaption">—№5—</span>
 							<span class="subcaption">Большинство едет в Гранд Каньон и толпится там</span>
 						</li>
 					</ul>
@@ -104,7 +105,7 @@
 				<span class="caption">Заинтересовались?</span>
 				<span class="subcaption">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</span>
 			</p>
-			<button type="button" class="form-active-button" name="form-button">Поиск гостиницы в Седоне</button>
+			<button type="button" class="form-active-button" name="form-button" aria-label="Кнопка открытия формы поиска гостиницы">Поиск гостиницы в Седоне</button>
 			<section class="modal">
 			<h3 class="visually-hidden">Поиск гостиницы в Седоне</h3>
 				<form class="search-form" method="post" action="#">
@@ -112,7 +113,7 @@
 						<li class="all-field">
 							<label for="arrival">Дата заезда:</label>
 							<input type="text" name="arrival-field" id="arrival" placeholder="24 апреля 2017">
-							<button class="button-input" type="button">
+							<button class="button-input" type="button" aria-label="Кнопка открытия календаря">
 								<svg class="cal-icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 							 		width="21px" height="22px" viewBox="0 0 21 22" enable-background="new 0 0 21 22" xml:space="preserve">
 									<g id="calendar_1_">
@@ -139,7 +140,7 @@
 						<li class="all-field">
 							<label for="depardue">Дата выезда:</label>
 							<input type="text" name="depardue-field" id="depardue" placeholder="4 июля 2017">
-							<button class="button-input" type="button">
+							<button class="button-input" type="button" aria-label="Кнопка изменения числа">
 								<svg class="cal-icon" version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 							 		width="21px" height="22px" viewBox="0 0 21 22" enable-background="new 0 0 21 22" xml:space="preserve">
 									<g id="calendar_2_">
@@ -165,24 +166,40 @@
 						</li>
 						<li class="all-field half">
 							<label for="adults">Взрослые:</label>
-							<button class="button-input" type="button"><img src="img/minus.png" alt="Кнопка плюс" width="20" height="20"></button>
+							<button class="button-input" type="button" aria-label="Кнопка уменьшения числа взрослых на 1">
+								<svg class="button-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="7 -4 20 20">
+								<path fill="#a9a9a9" d="M9 3h6v2h-6v-2z"></path>
+								</svg>
+							</button>
 							<input type="text" name="adults-field" id="adults" placeholder="2">
-							<button class="button-input" type="button"><img src="img/plus.png" alt="Кнопка минус" width="20" height="20"></button>
+							<button class="button-input" type="button" aria-label="Кнопка увеличения числа взрослых на 1">
+								<svg class="button-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="-4 -4 20 20" >
+								<path fill="#a9a9a9" d="M5 1h-2v2h-2v2h2v2h2v-2h2v-2h-2z"></path>
+								</svg>
+							</button>
 						</li>
-						<li class="all-field half">
+						<li class="all-field half half-second">
 							<label for="children">Дети:</label>
-							<button class="button-input" type="button"><img src="img/minus.png" alt="Кнопка плюс" width="20" height="20"></button>
+							<button class="button-input" type="button" aria-label="Кнопка уменьшения числа детей на 1">
+								<svg class="button-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="7 -4 20 20">
+								<path fill="#a9a9a9" d="M9 3h6v2h-6v-2z"></path>
+								</svg>
+							</button>
 							<input type="text" name="chidren-field" id="children" placeholder="0">
-							<button class="button-input" type="button"><img src="img/plus.png" alt="Кнопка минус" width="20" height="20"></button>
+							<button class="button-input" type="button" aria-label="Кнопка увеличения числа детей на 1">
+								<svg class="button-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="-4 -4 20 20" >
+								<path fill="#a9a9a9" d="M5 1h-2v2h-2v2h2v2h2v-2h2v-2h-2z"></path>
+								</svg>
+							</button>
 						</li>
 					</ul>
-					<button type="button" class="search-button">Найти</button>
+					<button  class="search-button" aria-label="Кнопка поиска гостиницы по указаным параметрам">Найти</button>
 				</form>
 		</section>
 		</section>
 
 		<section class="map container">
-				<img src="img/map.jpg" alt="Карта Седоны" width="1220" height="592">
+			<img src="img/map.jpg" alt="Карта Седоны" width="1220" height="592">
 		</section>
 
   	</main>
@@ -210,6 +227,8 @@
 			</p>
 		</div>
 	</footer>
-
+</div>
+</div>
+<script type="text/javascript" src="js/scriptMin.js"></script>
 </body>
 </html>

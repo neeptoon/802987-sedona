@@ -1,6 +1,7 @@
 body {
-	margin: 0;
+	margin: 0 auto;
 	padding: 0;
+	width: 1200px;
 
 
 	font-family: "PT Sans", Arial, sans-serif;
@@ -14,8 +15,7 @@ body {
 
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
-input[type="radio"].visually-hidden
-{
+input[type="radio"].visually-hidden {
   position: absolute;
 
   width: 1px;
@@ -26,7 +26,9 @@ input[type="radio"].visually-hidden
 
   white-space: nowrap;
 
-  clip-path: inset(100%);
+  -webkit-clip-path: inset(100%);
+
+          clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -44,7 +46,9 @@ input[type="radio"].visually-hidden {
 
   white-space: nowrap;
 
-  clip-path: inset(100%);
+  -webkit-clip-path: inset(100%);
+
+          clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -58,17 +62,36 @@ img {
 	height: auto;
 }
 
+.wrapper {
+	width: 1280px;
+
+	background-color: #f2f2f2;
+}
+
+.wrapper-shadow {
+	width: 1200px;
+	box-shadow: 0px 0 32px -10px #000000;
+	margin: 0 auto;
+}
+
 .container {
   width: 1200px;
   margin: 0 auto;
-  padding: 0 40px;
-}
+ }
 
 
 .page-navigation {
+	position: relative;
+
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-ms-flex-pack: distribute;
+	    justify-content: space-around;
 	min-height: 60px;
 	margin-bottom: 0;
 
@@ -81,9 +104,14 @@ img {
 }
 
 .navigation-list {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: flex-start;
-	flex-wrap: wrap;
+	-webkit-box-pack: start;
+	    -ms-flex-pack: start;
+	        justify-content: flex-start;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
 	margin: 0;
 	padding: 0;
 	min-width: 1200px;
@@ -101,7 +129,7 @@ img {
 }
 
 .navigation-list li:first-child {
-	margin-left: 55px;
+	margin-left: 52px;
 	margin-right: 110px;
 }
 
@@ -127,7 +155,7 @@ img {
 
 .logo img {
 	position: absolute;
-	right: 720px;
+	right: 529px;
 
 	width: 140px;
 	height: 70px;
@@ -136,7 +164,7 @@ img {
 
 .hills-image {
 	width: 1200px;
-	height: 720px;
+	min-height: 720px;
 	background-image:
 		url("../img/mask-repeat.jpg"),
 		url("../img/intro-mask.svg"),
@@ -145,6 +173,7 @@ img {
 	background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
 	background-position: 0 500px, center 445px, 50% 73px, center;
 	background-size: 100%, 100%, 38%, cover;
+	background-color: #deebf4;
 
 }
 
@@ -154,15 +183,25 @@ img {
 
 .about-us span {
 	display: block;
+	width: 445px;
 }
 
 .about-us {
 	position: absolute;
 	top: -155px;
-	right: 360px;
-	margin: 0;
+	right: 354px;
+	margin: 0 auto;
 
 	text-align: center;
+}
+
+.about-us .caption {
+	margin-bottom: 28px;
+	margin-left: 20px;
+}
+
+.about-us .subcaption {
+	width: 490px;
 }
 
 .caption {
@@ -194,13 +233,19 @@ img {
 /*СТили для 1 и 3 строки преимуществ*/
 
 .advantage-list .all-width {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	height: 256px;
 
+
+	background-color: #81b3d2;
 }
 
 .advantage-list .left {
-	flex-direction: row-reverse;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: reverse;
+	    -ms-flex-direction: row-reverse;
+	        flex-direction: row-reverse;
 }
 
 .all-width .docket {
@@ -222,25 +267,38 @@ img {
 }
 
 .docket .caption {
-	margin-top: 45px;
-	line-height: 23px;
+	width: 150px;
+    margin-top: 47px;
+    margin-left: 126px;
+    margin-bottom: 19px;
+
+    line-height: 23px;
+}
+
+.docket .subcaption {
+	width: 302px;
+	margin-left: 50px;
 }
 
 .all-width .image {
 	margin: 0;
+	margin-bottom: -8px;
 	min-height: 255px;
 }
 
 /*Стили для 2 и 4 строки преимуществ*/
 
-.advantage-list li > ul {
+.second-row,
+.fourth-row {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	margin: 0;
 	padding: 0;
 
 	list-style: none;
 
-	background-color: #f2f2f2
+	background-color: #ffffff
 
 }
 
@@ -260,6 +318,7 @@ img {
 }
 
 .third .caption {
+	width: 120px;
 	margin-bottom: 20px;
 }
 
@@ -288,7 +347,7 @@ img {
 
 	position: absolute;
 	top: 60px;
-	left: 110px;
+	left: 24px;
 
 	width: 85px;
 	height: 75px;
@@ -301,7 +360,7 @@ img {
 
 	position: absolute;
 	top: 60px;
-	left: 110px;
+	left: 30px;
 
 	width: 85px;
 	height: 75px;
@@ -314,7 +373,7 @@ img {
 	min-height: 255px;
 }
 
-.fourth-row .third span:first-child {
+.fourth-row span:first-child {
 	margin-top: 45px;
 	margin-bottom: 20px;
 	padding-top: 0;
@@ -322,32 +381,40 @@ img {
 	text-align: center;
 }
 
-.fourth-row .third span {
-	max-width: 270px;
+.third span {
+	max-width: 285px;
 	margin-bottom: 15px;
 }
-
-
-
-
 
 .offer {
 	position: relative;
 
+	display: -webkit-box;
+
+	display: -ms-flexbox;
+
 	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-ms-flex-pack: distribute;
+	    justify-content: space-around;
 	margin: 0;
 	padding: 0;
 
-	align-items: center;
+	-webkit-box-align: center;
+
+	    -ms-flex-align: center;
+
+	        align-items: center;
 
 	background-color: #ffffff;
 }
 
 .offer .desc {
 	margin-top: 57px;
-	margin-bottom: 50px;
+	margin-bottom: 46px;
 }
 
 .desc .caption {
@@ -366,9 +433,9 @@ img {
 
 .offer .form-active-button {
 	display: block;
-	width: 575px;
-	height: 85px;
-	padding: 0;
+	width: 568px;
+	min-height: 85px;
+	padding: 10px;
 
 	font-size: 21px;
 	font-weight:bold;
@@ -387,6 +454,8 @@ img {
 .offer .form-active-button:focus {
 	background-color: #503e33;
 	color: #857871;
+
+	outline: none;
 }
 
 .map {
@@ -403,13 +472,19 @@ img {
 .index-footer {
 	position: absolute;
 	top: 2643px;
-	left: 152px;
+	left: 233px;
 }
 
 .page-footer {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: flex-start;
-	align-items: baseline;
+	-webkit-box-pack: start;
+	    -ms-flex-pack: start;
+	        justify-content: flex-start;
+	-webkit-box-align: baseline;
+	    -ms-flex-align: baseline;
+	        align-items: baseline;
 	padding: 0;
 
 	background: rgba(250, 250, 250, 0.7);
@@ -436,8 +511,12 @@ img {
 }
 
 .page-footer .social-list {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-between;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 	width: 150px;
 	margin: 0;
 	padding: 0;
@@ -445,9 +524,15 @@ img {
 }
 
 .social-button {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	width: 46px;
 	height: 48px;
 
@@ -467,6 +552,8 @@ img {
 }
 
 .page-footer .developer {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	margin: 0;
 	padding-left: 39px;
@@ -478,11 +565,11 @@ img {
 	top: -10px;
 }
 
-.developer a:hover path {
+a:hover path {
 	fill: #81b3d2;
 }
 
-.developer a:focus path {
+a:focus path {
 	fill: #bdbbbc;
 }
 
@@ -494,25 +581,60 @@ img {
 	line-height:26px;
 }
 
+@keyframes bounce {
+	0% {transform: scale(0.1);}
+	20% {transform: scale(0.2);}
+	30% {transform: scale(0.3);}
+	40% {transform: scale(0.4);}
+	50% {transform: scale(0.5);}
+	60% {transform: scale(0.7);}
+	70% {transform: scale(0.9);}
+	80% {transform: scale(1.1);}
+	90% {transform: scale(1.05);}
+	95% {transform: scale(1.03);
+	100% {transform: scale(1);}
+	}
+}
 
+.modal-hidden {
+	display: none;
+}
 
 .modal .search-form {
 	position: absolute;
-	left: 312px;
+	left: 315px;
+
+	display: -webkit-box;
+
+	display: -ms-flexbox;
 
 	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	width: 575px;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-ms-flex-pack: distribute;
+	    justify-content: space-around;
+	width: 569px;
 	min-height: 400px;
 
 	background-color: #ffffff;
+
+	animation-name: bounce;
+	animation-duration: 0.6s;
+}
+
+.search-form-hidden {
+	display: none;
 }
 
 .search-form .search-list {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-wrap: wrap;
-	margin: 40px 5px 0;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	margin: 53px -5px 22px 0;
 }
 
 .search-list {
@@ -541,9 +663,11 @@ img {
 	width: 300px;
 	height: 40px;
 	padding: 0 10px;
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 
 	font-weight: bold;
+	text-transform: uppercase;
 
 	border: none;
 
@@ -553,7 +677,7 @@ img {
 .half input {
 	width: 25px;
 	padding: 0;
-	padding-left: 5px;
+	padding-left: 8px;
 	margin: 0 -4px;
 
 	border: none;
@@ -576,7 +700,8 @@ img {
 	width: 45px;
 	height: 40px;
 	margin-left: -4px;
-	padding: 0;
+	padding: 9px;
+	padding-left: 14px;
 
 	line-height: 26px;
 	vertical-align: top;
@@ -585,6 +710,22 @@ img {
 	outline: none;
 
 	background-color: #f2f2f2;
+}
+
+.half .button-input {
+	margin-left: -2px;
+}
+
+.half-second .button-input {
+	margin-left: -5px;
+}
+
+.button-input:hover path {
+	fill: #000000;
+}
+
+.button-input:active path {
+	fill: #81b3d2;
 }
 
 .cal-icon {
@@ -602,9 +743,10 @@ img {
 
 .search-form .search-button {
 	width: 460px;
-	height: 60px;
-	margin: 0 auto;
+	min-height: 60px;
+	margin: -5px auto;
 	margin-bottom: 55px;
+	padding: 10px;
 
 	outline: none;
 	border: none;
@@ -612,14 +754,14 @@ img {
 
 .all-field label {
 	display: inline-block;
-	width: 112px;
-	height: 40px;
+	width: 110px;
+	min-height: 40px;
 	padding-left: 5px;
 
 	font-size: 14px;
 	font-weight: bold;
 	line-height:26px;
-
+	vertical-align: baseline;
 
 	color: #000000;
 }
@@ -661,11 +803,16 @@ img {
 	margin-top: -4px;
 
 	background: url("../img/filterMountains.jpg") no-repeat center;
+	background-color: #875c55;
 }
 
 .choise form {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: flex-start;
+	-webkit-box-pack: start;
+	    -ms-flex-pack: start;
+	        justify-content: flex-start;
 }
 
 fieldset {
@@ -847,7 +994,8 @@ form fieldset:nth-child(2) {
 	border-radius: 2px;
 	outline: none;
 	background: none;
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 
 .form-button:hover {
@@ -861,7 +1009,7 @@ form fieldset:nth-child(2) {
 .sort .sort-list,
 .hotels .hotels-list,
 .item > ul,
-.item > ul > li > ul {
+.column-2 ul {
 	margin: 0;
 	padding: 0;
 	list-style: none;
@@ -870,20 +1018,29 @@ form fieldset:nth-child(2) {
 /*Стили для блока сортировки*/
 
 .sort  {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	align-items: baseline;
+	-webkit-box-align: baseline;
+	    -ms-flex-align: baseline;
+	        align-items: baseline;
+
+	background-color: #ffffff;
 
 	border-bottom: 1px solid #857871;
 }
 
 .sort .sort-list {
 	display: inline-block;
+
+	vertical-align: baseline;
 }
 
 .sort-list li {
 	display: inline-block;
-
 	margin-right: 29px;
+
+	vertical-align: baseline;
 }
 
 .sort-list li:nth-child(3) {
@@ -973,6 +1130,7 @@ form fieldset:nth-child(2) {
 	font-size: 21px;
 	font-weight: bold;
 	line-height: 26px;
+	vertical-align: baseline;
 }
 
 .found span:last-child {
@@ -981,13 +1139,21 @@ form fieldset:nth-child(2) {
 
 	font-size: 12px;
 	line-height: 18px;
+	vertical-align: baseline;
 }
 
 /*Стили для карточек отелей*/
 
 .hotels .hotels-list {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+
+	background-color: #ffffff;
 }
 
 ul .item {
@@ -995,8 +1161,12 @@ ul .item {
 }
 
 .item > ul {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: flex-start;
+	-webkit-box-pack: start;
+	    -ms-flex-pack: start;
+	        justify-content: flex-start;
 }
 
 .column-1 {
@@ -1021,6 +1191,8 @@ ul .item {
 	display: inline-block;
 	width: 110px;
 	margin-right: 5px;
+
+	vertical-align: baseline;
 }
 
 .column-3 {
@@ -1037,8 +1209,12 @@ ul .item {
 }
 
 .stars-wrapper {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: flex-end;
+	-webkit-box-pack: end;
+	    -ms-flex-pack: end;
+	        justify-content: flex-end;
 	margin-top: 25px;
 	margin-bottom: 45px;
 	margin-left: 13px;
@@ -1057,7 +1233,7 @@ ul .item {
 .button {
 	display: inline-block;
 	width: 110px;
-	height: 27px;
+	min-height: 27px;
 
 	font-size: 14px;
 	font-weight: bold;
