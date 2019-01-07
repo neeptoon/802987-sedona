@@ -7,7 +7,7 @@ var depardue = form.querySelector("[name=depardue-field]");
 
 formActive.addEventListener("click", function (evt) {
 	evt.preventDefault();
-	formSection.classList.toggle("modal-hidden");
+	formSection.classList.toggle("modal-show");
 	focusInput.focus();
 });
 

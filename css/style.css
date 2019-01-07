@@ -596,8 +596,12 @@ a:focus path {
 	}
 }
 
-.modal-hidden {
+.modal {
 	display: none;
+}
+
+.modal-show {
+	display: block;
 }
 
 .modal .search-form {
